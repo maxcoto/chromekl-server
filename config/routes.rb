@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'display#index'
+
+  get '/display/:uid', to: 'display#index', as: 'display_user'
+  get '/display/:uid/:pid', to: 'display#index', as: 'display_post'
 
   post '/receive' => 'receive#index'
 

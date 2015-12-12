@@ -1,0 +1,34 @@
+<div class="panel-left">
+  <% @users.each do |user| %>
+    <div class="user-row <%= 'font-white' if @user == user %>">
+      <span><%= link_to (user.name || user.token), display_user_path(user.id) %></span>
+      <span class='circle <%= user.enabled? ? "green" : "red" %>'> </span>
+
+      <div class='actions'>
+        <span><%= link_to 'e', edit_user_path(user) %></span>
+        &nbsp;
+        <span><%= link_to 'x', user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% if @posts %>
+  <div class="panel-right">
+    <div class="panel-top">
+      <% @posts.each do |post| %>
+      <% @selected = false %>
+        <div class="page-row <%= 'font-black' if @post == post && !@selected %>">
+          <% @selected = true %>
+          <span><%= link_to post.page, display_post_path(post.user.id, post.id) %></span>
+        </div>
+      <% end %>
+    </div>
+
+    <% if @post %>
+      <div class="panel-bottom">
+        <%= @post.track %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

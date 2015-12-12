@@ -1,0 +1,75 @@
+// Place all the styles related to the display controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.panel-left {
+  width: 20%;
+  height: 100%;
+  float: left;
+  background-color: #C7408B;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.4);
+  margin-right: 30px;
+}
+
+.panel-right {
+  width: 70%;
+  float: left;
+}
+
+.panel-top {
+  float: left;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.panel-bottom {
+  float: left;
+  background-color: #F9F9F9;
+  padding: 30px;
+  width: 100%;
+}
+
+.user-row:first-child {
+  padding-top: 20px;
+}
+
+.user-row {
+  padding: 0px 25px 20px 25px;
+}
+
+.actions {
+  float: right;
+}
+
+.page-row {
+  margin-top: 15px;
+  margin-right: 10px;
+  background-color: #F9F9F9;
+  padding: 10px 30px;
+  float: left;
+}
+
+.panel-left a {
+  color: rgba(255, 255, 255, 0.49);
+}
+
+.panel-left a:hover {
+  color: white;
+}
+
+.page-row a {
+  color: #C7C7C7;
+}
+
+.page-row a:hover {
+  color: black;
+}
+
+.font-white a {
+  color: white;
+}
+
+.font-black a {
+  color: black;
+}
